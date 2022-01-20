@@ -235,7 +235,7 @@ async def g_clonee(client, message):
 async def rename_tg_file(client, message):
     usr_id = message.from_user.id
     if not message.reply_to_message:
-        await message.reply("😔 No downloading source provided 🙄", quote=True)
+        await message.reply(" Jo File Rename krna hai usko reply toh kar 🙄", quote=True)
         return
     if len(message.command) > 1:
         new_name = (
@@ -272,7 +272,7 @@ async def rename_tg_file(client, message):
                 message_to_send += "\n"
             if message_to_send != "":
                 mention_req_user = (
-                    f"<a href='tg://user?id={usr_id}'>Your Requested Files</a>\n\n"
+                    f"<a href='tg://user?id={usr_id}'>Tune Jo maanga Tha Le vo</a>\n\n"
                 )
                 message_to_send = mention_req_user + message_to_send
                 message_to_send = message_to_send + "\n\n" + "#uploads"
@@ -286,5 +286,5 @@ async def rename_tg_file(client, message):
 
     else:
         await message.reply_text(
-            "😔 Provide new name of the file with extension 😐", quote=True
+            "Naya Naam kon 😑😑Dega", quote=True
         )
